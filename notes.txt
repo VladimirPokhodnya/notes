@@ -1,0 +1,11 @@
+форматирование исходников
+clang-format style=Google 
+
+создание репозитория из командной строки
+curl -u 'USER' https://api.github.com/user/repos -d'{"name":"demo"}'
+git remote add origin https://github.com/USER_NAME/demo.git
+git push -u origin master
+
+удалить файл из индекса
+git reset filename
+
