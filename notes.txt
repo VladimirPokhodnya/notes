@@ -9,3 +9,5 @@ git push -u origin master
 удалить файл из индекса
 git reset filename
 
+gtk4
+gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
