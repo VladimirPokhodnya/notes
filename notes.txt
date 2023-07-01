@@ -11,3 +11,6 @@ git reset filename
 
 gtk4
 gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
+
+создание базы данных в docker-compose
+docker-compose exec postgres psql -U postgres -c "CREATE DATABASE interview_java"
