@@ -12,5 +12,38 @@ git reset filename
 gtk4
 gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
 
+
+
+## Docker
 создание базы данных в docker-compose
 docker-compose exec postgres psql -U postgres -c "CREATE DATABASE interview_java"
+
+Удаление всех контейнеров Docker:
+docker rm $(docker ps -a -q)
+
+Удаление всех сетей Docker:
+docker network prune
+
+Удаление всех томов Docker:
+docker volume prune
+
+Подробная информация о использовании дискового пространства Docker.
+docker system df -v
+
+Просмотр запущенных контейнеров:
+docker ps
+
+Просмотр всех контейнеров:
+docker ps -a
+
+Просмотр образов Docker:
+docker images
+
+Просмотр сетей Docker:
+docker network ls
+
+Просмотр томов Docker:
+docker volume ls
+
+Просмотреть содержимое внутри контейнера Docker
+docker exec -it {имя_контейнера}
