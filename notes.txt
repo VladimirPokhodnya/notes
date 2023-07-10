@@ -1,18 +1,18 @@
+## C
 форматирование исходников
 clang-format style=Google 
+
+gtk4
+gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
+
+## GIT
+удалить файл из индекса
+git reset filename
 
 создание репозитория из командной строки
 curl -u 'USER' https://api.github.com/user/repos -d'{"name":"demo"}'
 git remote add origin https://github.com/USER_NAME/demo.git
 git push -u origin master
-
-удалить файл из индекса
-git reset filename
-
-gtk4
-gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
-
-
 
 ## Docker
 создание базы данных в docker-compose
@@ -47,3 +47,16 @@ docker volume ls
 
 Просмотреть содержимое внутри контейнера Docker
 docker exec -it {имя_контейнера}
+
+
+## MySQL
+Создание и удаление пользователя
+CREATE USER 'имя_пользователя'@'localhost' IDENTIFIED BY 'пароль';
+GRANT SELECT, INSERT, UPDATE ON `имя_базы`.* TO 'имя_пользователя'@'localhost';
+SELECT User, Host FROM mysql.user;
+SHOW GRANTS FOR 'имя_пользователя'@'хост';
+FLUSH PRIVILEGES;
+...
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'имя_пользователя'@'localhost';
+DROP USER 'имя_пользователя'@'localhost';
+FLUSH PRIVILEGES;
