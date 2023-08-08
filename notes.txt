@@ -27,6 +27,9 @@ docker network prune
 Удаление всех томов Docker:
 docker volume prune
 
+Удаление кеша сборки
+docker builder prune
+
 Подробная информация о использовании дискового пространства Docker.
 docker system df -v
 
