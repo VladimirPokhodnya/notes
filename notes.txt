@@ -65,5 +65,16 @@ DROP USER 'имя_пользователя'@'localhost';
 FLUSH PRIVILEGES;
 
 ## Linux
-Поиск больших файлов и папок
+самые большие каталоги в разделе
 sudo du -a . | sort -n -r | head -n 5
+
+самые большие файлы в Кб, Мб или Гб.
+du -hs * | sort -rh | head -5
+
+самые большие папки или файлы, включая подкаталоги
+du -Sh | sort -rh | head -5
+
+только самые большие файлы
+find -type f -exec du -Sh {} + | sort -rh | head -n 5
+find . -type f -exec du -Sh {} + | sort -rh | head -n 5
+find . -type f -printf "%s %p\n" | sort -rn | head -n 5
