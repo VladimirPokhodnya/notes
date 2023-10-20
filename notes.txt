@@ -8,6 +8,9 @@ gcc -Wall simple.c -o simple `pkg-config --cflags --libs gtk4`
 ## GIT
 удалить файл из индекса
 git reset filename
+удалить последний коммит
+git reset --soft HEAD^
+git push -f origin HEAD^:master
 
 создание репозитория из командной строки
 curl -u 'USER' https://api.github.com/user/repos -d'{"name":"demo"}'
