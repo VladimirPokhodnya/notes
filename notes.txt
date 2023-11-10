@@ -86,3 +86,5 @@ find . -type f -printf "%s %p\n" | sort -rn | head -n 5
 https://www.paulbarrick.com/game-devlopment/game-development-on-linux-using-vscode-sdl2-and-opengl/
 https://lazyfoo.net/tutorials/SDL/index.php
 
+## PostgreSQL 9.6 install Ubuntu 20.04
+https://www.rosehosting.com/blog/how-to-install-postgresql-9-6-on-ubuntu-20-04/
