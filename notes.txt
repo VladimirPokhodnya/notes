@@ -82,6 +82,13 @@ find -type f -exec du -Sh {} + | sort -rh | head -n 5
 find . -type f -exec du -Sh {} + | sort -rh | head -n 5
 find . -type f -printf "%s %p\n" | sort -rn | head -n 5
 
+убрать обои с рабочего стола
+gsettings set org.gnome.desktop.background picture-uri none
+gsettings set org.gnome.desktop.background primary-color '#FF0000'
+gsettings set org.gnome.desktop.background color-shading-type 'solid'
+
+gsettings set org.gnome.desktop.background secondary-color '#00FF00'
+
 ## Game development on Linux using VSCode, SDL2 and OpenGL
 https://www.paulbarrick.com/game-devlopment/game-development-on-linux-using-vscode-sdl2-and-opengl/
 https://lazyfoo.net/tutorials/SDL/index.php
